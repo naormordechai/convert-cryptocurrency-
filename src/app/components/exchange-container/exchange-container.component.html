@@ -1,0 +1,13 @@
+<div class="exchange">
+    {{person.name}}
+    <mat-card class="exchange__card">
+        <app-exchange-form [exchangeForm]="form" [cryptoList]="cryptoList | async"
+            [currenciesList]="currenciesList | async" (searchEvent)="onSearch($event)" 
+            [person]="person"></app-exchange-form>
+    </mat-card>
+    <mat-spinner *ngIf="isLoading" [diameter]="50"></mat-spinner>
+    <ng-container *ngIf="cryptoDisplay && cryptoDisplay.value && !isLoading">
+        <app-convert-display (countChangedEvent)="countChanged($event)" [count]="cryptoDisplay.count"
+            [target]="cryptoDisplay.currency" [value]="cryptoDisplay.value"></app-convert-display>
+    </ng-container>
+</div>

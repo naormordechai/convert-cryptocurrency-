@@ -1,0 +1,20 @@
+<form [formGroup]="exchangeForm" (submit)="submitHandler()">
+    <mat-form-field appearance="fill">
+        <mat-label>Cryptocurrency</mat-label>
+        <mat-select formControlName="cryptocurrency">
+            <mat-option *ngFor="let cryptocurrency of cryptoList" [value]="cryptocurrency">
+                {{cryptocurrency}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Currency</mat-label>
+        <mat-select formControlName="currency">
+            <mat-option *ngFor="let currency of currenciesList" [value]="currency">
+                {{currency}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-button [disabled]="!exchangeForm.valid">Submit</button>
+</form>

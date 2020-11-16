@@ -1,0 +1,9 @@
+<section class="convert">
+    <mat-form-field appearance="fill">
+        <mat-label>Count</mat-label>
+        <input [value]="count || 1" matInput (keyup)="countChangedEvent.emit($event)" type="number">
+    </mat-form-field>
+    <div class="convert__display">
+        <h3>{{value | number}}&nbsp;{{target}}</h3>
+    </div>
+</section>

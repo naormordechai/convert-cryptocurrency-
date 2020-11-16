@@ -1,0 +1,14 @@
+:host {
+    .convert {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        mat-form-field { width: 100px; }
+        &__display {
+            margin-left: 12px;
+            h3 { 
+                font-size: 30px;
+            }
+        }
+    }
+}
