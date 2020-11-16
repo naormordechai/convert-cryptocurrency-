@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CurrencyService {
-  private url = 'http://api.coinlayer.com/api/live?access_key=482a606c1c8ccf9e636db273ed4fb931';
+  private url = 'https://api.coinlayer.com/api/live?access_key=482a606c1c8ccf9e636db273ed4fb931';
 
   constructor(private http: HttpClient) { }
 
