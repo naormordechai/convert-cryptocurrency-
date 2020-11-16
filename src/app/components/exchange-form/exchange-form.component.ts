@@ -11,7 +11,6 @@ export class ExchangeFormComponent implements OnInit {
   @Input() cryptoList: string[];
   @Input() currenciesList: string[];
   @Output() searchEvent = new EventEmitter();
-  @Input() person: any;
 
   constructor() { }
 
