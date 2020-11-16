@@ -1,5 +1,4 @@
 <div class="exchange">
-    {{person.name}}
     <mat-card class="exchange__card">
         <app-exchange-form [exchangeForm]="form" [cryptoList]="cryptoList | async"
             [currenciesList]="currenciesList | async" (searchEvent)="onSearch($event)"></app-exchange-form>
